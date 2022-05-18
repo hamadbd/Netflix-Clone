@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+nav a {
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size:large;
+  }
+nav a:hover {
+    color: #2C3333;
+  }
+  header{
+    background-color: #ffffff;
+    border-radius: 0.5%;
+    line-height: 3.5;
+    display: block;
+    align-items: center;
+    height:fit-content;
+    text-align: center;
+    font-family:'Nunito', sans-serif ;
+    margin-bottom: 2%;
+    border-radius: 2%;
+}
+#logo a:hover {
+    color: #332f2c;
+  }
+#logo{
+      color: rgb(255, 0, 0);
+      text-transform: uppercase;
+      padding: 0px 0px;
+      background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    }

@@ -5,6 +5,8 @@ export default function Header() {
     return (
         <Nav.Item>
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/fav">fav-List</Nav.Link>
+
         </Nav.Item>
        
     );

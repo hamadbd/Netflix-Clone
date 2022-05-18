@@ -1,28 +1,26 @@
-import React from "react";
+import MovieList from "../MovieList/MovieList.jsx";
+import Navbar from "../Navbar/Navbar.jsx";
+import Footer from "../Footer/Footer.jsx";
+import "../Home/Home.css";
 import { useState, useEffect } from "react";
-import Header from "../Header";
-import Movielist from "../MovieList/MovieList";
 
 export default function Home() {
-    const [movies, setMovies] = useState(null);
-    //"https://movies2000.herokuapp.com/trending"
-     async function getData() {
-         let response = await fetch("https://movies2000.herokuapp.com/trending");
-         let data = await response.json();
-         setMovies(data);
-        
-    };
+    const [movie, setMovie] = useState([]);
+    async function getData() {
+        //https://movies2000.herokuapp.com/
+        let response = await fetch(`${process.env.REACT_APP_SERVER}/trending`);
+        let data = await response.json();
+        setMovie(data);
+    }
     useEffect(() => {
-        getData();
-
+        getData()
     }, []);
     return (
         <>
-            <h1>From Home Page</h1>
-            <Header />
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", height: "100px" }}>
-                {movies && <Movielist movies={movies} />}
-            </div>
+            <Navbar />
+            {movie && <MovieList data={movie} />}
+            <Footer />
         </>
+
     )
-};
+}

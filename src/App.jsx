@@ -1,20 +1,14 @@
-import './App.css';
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
-//import Favlist from "./components/favlist/Favlist";
-//import Modalmovie from "./components/modalmovie/Modalmovie";
-//import Movie from "./components/movie/Movie";
-//import Movielist from "./components/movielist/Movielist";
-//import Navbar from "./components/navbar/Navbar";
+// import Button from 'react-bootstrap/Button';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route} from "react-router-dom";
+import Home from "./components/Home/Home"
+import FavList from "./components/FavList/FavList";
 
 export default function App() {
-    console.log("ERROR");
-    return (
+    return(
         <Routes>
-            <Route path="/" element={<Home />} />
-            
-
-        </Routes>
-    );
+        <Route path="/" element={<Home />} />
+        <Route path="/addMovie" element={<FavList />} />
+      </Routes>
+    )
 }

@@ -1,9 +1,17 @@
-import React from "react";
-//import { Link } from "react-router-dom";
-//import { Nav } from "react-bootstrap";
-export default function Movielist() {
-    return (
-    <h1>HELLO</h1>
+import Movie from "../Movie/Movie";
 
-    );
+import "./MovieList.css";
+export default function MovieList({data}){
+    return(
+        <div id="content">
+        {
+            data.map((data)=>{
+                return(
+                    <div key={data.id}><Movie data={data}/></div>
+                )
+            })
+        }
+        </div>
+        
+    )
 }
